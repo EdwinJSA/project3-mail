@@ -1,3 +1,23 @@
 textarea {
     min-height: 400px;
 }
+
+.read{
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    background-color: rgb(219, 219, 219)
+}
+
+.unread:hover{
+    box-shadow: 10px 10px 52px 0px rgba(0,158,207,0.57);
+-webkit-box-shadow: 10px 10px 52px 0px rgba(0,158,207,0.57);
+-moz-box-shadow: 10px 10px 52px 0px rgba(0,158,207,0.57);
+}
+
+.unread{
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255)
+}

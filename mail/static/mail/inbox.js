@@ -54,6 +54,8 @@ function load_mailbox(mailbox) {
           <p><strong>Subject</strong>: ${element.subject}</p>
           <p>${element.timestamp}</p>
         `
+        email.className = element.read ? 'read' : 'unread';
+
         document.querySelector('#emails-view').append(email);  
 
         //thas is when you click on an email, for view it
@@ -73,6 +75,10 @@ function load_mailbox(mailbox) {
                 <p><strong>Subject</strong>: ${email.subject}</p>
                 <p><strong>Timestamp</strong>: ${email.timestamp}</p>
               `
+              //thats is when you click on an email and class is changed to "read"
+
+
+
               if(!email.read){
                 fetch(`/emails/${email.id}`, {
                   method: 'PUT',
@@ -81,6 +87,8 @@ function load_mailbox(mailbox) {
                   })
                 })
               }
+              
+
               console.log(element.id + " WAS READ - " + element.read);
 
 
